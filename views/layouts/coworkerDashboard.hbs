@@ -1,0 +1,56 @@
+{{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  User has been removed.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<div class="row">
+  <div class="col-6">
+    <h1 style="padding-bottom: 20px;">All Properties</h1>
+  </div>
+</div>
+
+<table class="table table-bordered" >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+       <th scope="col">Type</th>
+      <th scope="col">Address</th>
+      <th scope="col">Neighbourhood</th>
+       <th scope="col">Area</th>
+        <th scope="col">Seats</th>
+        <th scope="col">Smoking Area</th>
+         <th scope="col">Parking Facility</th>
+          <th scope="col">Availability</th>
+           <th scope="col">Lease</th>
+            <th scope="col">Price</th>
+     
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.property_id}}</th>
+      <td style="max-width: 200px; word-wrap: break-word ">{{this.property_title}}</td>
+      <td>{{this.property_type}}</td>
+      <td style="max-width: 200px; word-wrap: break-word ">{{this.property_address}}</td>
+      <td style="max-width: 150px; word-wrap: break-word ">{{this.property_neighbourhood}}</td>
+      <td>{{this.property_area}}</td>
+      <td>{{this.property_seats}}</td>
+      <td>{{this.prop_smoking_area}}</td>
+      <td>{{this.prop_parking_facility}}</td>
+      <td>{{this.prop_availability}}</td>
+      <td>{{this.property_lease}}</td>
+      <td>{{this.property_rent}}</td>
+      <td class="text-end">
+        <a href="/viewproperty/{{this.property_id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>

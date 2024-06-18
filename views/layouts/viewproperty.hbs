@@ -1,0 +1,75 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+ <li class="breadcrumb-item"><a href="/ownerDashboard">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View property</li>
+  </ol>
+</nav>
+<h1>Property Details</h1>
+<div class="viewproperty">
+  {{#each rows}}
+  <div class="row mb-2">
+    <div class="col text-center">
+      <h3></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+      <th scope="col">Title</th>
+       <th scope="col">Type</th>
+      <th scope="col">Address</th>
+      <th scope="col">Neighbourhood</th>
+       <th scope="col">Area</th>
+        <th scope="col">Seats</th>
+        <th scope="col">Smoking Area</th>
+         <th scope="col">Parking Facility</th>
+          <th scope="col">Availability</th>
+           <th scope="col">Lease</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row">{{this.property_id}}</th>
+      <td>{{this.property_title}}</td>
+      <td>{{this.property_type}}</td>
+     <td>{{this.property_address}}</td>
+      <td>{{this.property_neighbourhood}}</td>
+      <td>{{this.property_area}}</td>
+      <td>{{this.property_seats}}</td>
+      <td>{{this.prop_smoking_area}}</td>
+      <td>{{this.prop_parking_facility}}</td>
+      <td>{{this.prop_availability}}</td>
+      <td>{{this.property_lease}}</td>
+      <td>{{this.property_rent}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col">
+        <b>Description</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{this.property_description}}
+      </div>
+    </div>
+    <br><br>
+      <div class="row">
+      <div class="col">
+        <b>Contact Details</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{this.property_contact}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

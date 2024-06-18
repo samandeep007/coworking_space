@@ -1,0 +1,62 @@
+
+<h1 style="text-align: center; margin-bottom:35px">
+Looking for a
+Shared Workspace?</h1>
+<p style="margin-bottom: 35px; font-size:larger; text-align:center">Your search is finally over because we are here to bridge the gap between property owners and coworkers, so you can easily find your ideal workspace within seconds. What really makes WorkBuddy unique is the community we’ve worked to cultivate. Add an international network of mobile workspaces and a full calendar of business events, speakers and networking lunches, and you’ll see just how Spaces keeps you engaged and open to new possibilities.</p>
+<h2 style="padding-bottom: 15px">Register Here</h2>
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+<form class="row g-3 needs-validation" method="POST" action="/register" novalidate>
+    <div class="col-4">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Your First Name" name="first_name">
+      <label for="floatingInput">First Name</label>
+    </div>
+  </div>
+   <div class="col-4">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput"  placeholder="Your Last Name" name="last_name">
+      <label for="floatingInput">Last Name</label>
+    </div>
+  </div>
+  
+ 
+   <div class="col-4">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Your email" name="user_email">
+      <label for="floatingInput">Email</label>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingInput" placeholder="Your password" name="user_password">
+      <label for="floatingInput">Password</label>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Your phone" name="user_phone">
+      <label for="floatingInput">Phone</label>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="form-floating mb-3">
+      <select name="user_role" id="floatingInput" class="form-control">
+        <option value="Coworker">Coworker</option>
+        <option value="Owner">Owner</option>
+      </select>
+      <label for="floatingInput">User Role</label>
+    </div>
+  </div>
+  <div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>

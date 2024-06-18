@@ -1,0 +1,37 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">New Property</li>
+  </ol>
+</nav>
+
+<h1 style="padding-bottom: 15px">Login</h1>
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+<form class="row g-3 needs-validation" method="POST" action="/register" novalidate>
+ 
+   <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Your email" name="user_email">
+      <label for="floatingInput">Email</label>
+    </div>
+  </div>
+<br>
+<div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingInput" placeholder="Your password" name="user_password">
+      <label for="floatingInput">Password</label>
+    </div>
+  </div>
+  <div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+<a href="#">Click here to login</a></li>
